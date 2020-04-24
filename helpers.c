@@ -1,6 +1,7 @@
 #include "helpers.h"
 #include <math.h>
 
+
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
@@ -55,7 +56,18 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    return;
+    if (width % 2 == 0)
+    {
+        for (int i = 0; i < height; i++)
+        {
+            for (int j = 0; j < (width / 2); j++)
+            {
+                RGBTRIPLE temp = image[i][j];
+                image[i][j] = image[i][width - j];
+                image[i][width - j] = temp;
+            }
+        }
+    }
 }
 
 // Blur image
@@ -63,3 +75,4 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     return;
 }
+
