@@ -78,9 +78,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
            image[i][j].rgbtRed = image[i][j].rgbtGreen = image[i][j].rgbtBlue = 0;
            float n = 0.00;
-           int red = 0;
-           int green = 0;
-           int blue = 0;
+           float red = 0.00;
+           float green = 0.00;
+           float blue = 0.00;
            for (int x = i - 1; x < i + 2; x++)
            {
                for (int y = j - 1; y < j + 2; y++)
