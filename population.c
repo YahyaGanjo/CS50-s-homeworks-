@@ -1,7 +1,7 @@
 # include<stdio.h>
 # include<cs50.h>
 
-void calculate ( float y, float x);
+void calculate ( int y, int x);
 
 
 int main (void)
@@ -11,7 +11,7 @@ int main (void)
     {
     x = get_int("Start size: ");
     }
-    while (x <= 9);
+    while (x < 9);
     
         int y;
     do
@@ -23,12 +23,16 @@ int main (void)
     calculate ( y , x );
 }
 
-void calculate ( float y, float x)
+void calculate ( int y, int x)
 {
-    float gain = x / 3 ;
-    float lose = x / 4 ;
-    float GrowthPerYear = gain - lose ; 
-    float ActualGrowth = y - x ;
-    float Years = ActualGrowth / GrowthPerYear ;
-    printf ("Years: %f\n", Years);
+    int Years = 0;
+    do
+    {
+        int gain = x / 3 ;
+        int lose = x / 4 ;
+        x = x + gain - lose ; 
+        Years ++;
+    }
+    while ( x < y );
+        printf ("Years: %i\n", Years);
 }
