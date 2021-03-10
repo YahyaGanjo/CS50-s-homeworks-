@@ -18,7 +18,7 @@ int main (void)
     {
     y = get_int("End size: ");
     }
-    while (y <= x);
+    while (y < x);
     
     calculate ( y , x );
 }
