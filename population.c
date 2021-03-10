@@ -25,14 +25,21 @@ int main (void)
 
 void calculate ( int y, int x)
 {
+    if ( x == y )
+    {
+        printf("Years: 0\n");
+    }
+    else
+    {
     int Years = 0;
     do
     {
         int gain = x / 3 ;
         int lose = x / 4 ;
-        x = x + gain - lose ; 
+        x = x + gain - lose ;
         Years ++;
     }
     while ( x < y );
         printf ("Years: %i\n", Years);
+    }
 }
