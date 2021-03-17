@@ -40,21 +40,23 @@ int compute_score(string word)
     int TottalScore = 0;
     for (int x = 0; x < strlen(word); x++)
     {
-        int OneLetterScore = 0;
+        int LetterScore , LetterOrder ;
         if ( isupper(word[x]))
         {
-            OneLetterScore = word[x] - 64;
+            LetterOrder = word[x] - 64;
+            LetterScore = POINTS[LetterOrder];
         }
         else if ( islower(word[x]))
         {
-            OneLetterScore = word[x] - 96;
+            LetterOrder = word[x] - 96;
+            LetterScore = POINTS[LetterOrder];
         }
         else
         {
-            OneLetterScore = 0;
+            LetterScore = 0;
         }
         
-        TottalScore += OneLetterScore;
+        TottalScore += LetterScore;
     }
     
     return TottalScore;
