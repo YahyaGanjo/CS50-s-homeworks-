@@ -56,7 +56,7 @@ int compute_score(string word)
             LetterScore = 0;
         }
         
-        TottalScore += LetterScore;
+        TottalScore =+ LetterScore;
     }
     
     return TottalScore;
