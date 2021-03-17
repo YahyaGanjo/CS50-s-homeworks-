@@ -43,12 +43,12 @@ int compute_score(string word)
         int LetterScore , LetterOrder ;
         if ( isupper(word[x]))
         {
-            LetterOrder = word[x] - 64;
+            LetterOrder = word[x] - 65;
             LetterScore = POINTS[LetterOrder];
         }
         else if ( islower(word[x]))
         {
-            LetterOrder = word[x] - 96;
+            LetterOrder = word[x] - 97;
             LetterScore = POINTS[LetterOrder];
         }
         else
