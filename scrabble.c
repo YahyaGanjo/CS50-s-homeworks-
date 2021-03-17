@@ -22,11 +22,11 @@ int main(void)
     
     if ( score1 > score2 )
     {
-        printf("Player 1 wins\n");
+        printf("Player 1 wins!\n");
     }
     else if ( score1 < score2 )
     {
-        printf("Player 2 wins\n");
+        printf("Player 2 wins!\n");
     }
     else
     {
@@ -56,7 +56,7 @@ int compute_score(string word)
             LetterScore = 0;
         }
         
-        TottalScore =+ LetterScore;
+        TottalScore += LetterScore;
     }
     
     return TottalScore;
