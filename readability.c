@@ -10,7 +10,7 @@
 int main(void)
 {
     string text = get_string("Text: ");
-    int letters = 0 ; int words = 1 ; int sentences = 0 ;
+    int letters = 0 ; int words = 0 ; int sentences = 0 ;
     
 //count letters, words, sentences
     
@@ -20,11 +20,11 @@ int main(void)
         {
             letters++;
         }
-        else if (isspace(text[n]) == true)
+        if (isspace(text[n]) == true)
         {
             words++;
         }
-        else if ( (text[n] = '.') || (text[n] = '!') || (text[n] = '?') )
+        if ( (text[n] = '.') || (text[n] = '!') || (text[n] = '?') )
         {
             sentences++;
         }
