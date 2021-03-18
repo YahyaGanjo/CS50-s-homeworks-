@@ -5,6 +5,7 @@
 #include <cs50.h>
 #include <string.h>
 #include <math.h>
+#include<ctype.h>
 
 int main(void)
 {
@@ -16,12 +17,12 @@ int main(void)
     for (int n = 0; n < strlen(text); n++)
     {
         
-        if (((text[n] > 64) && (text[n] < 91)) || ((text[n] > 96) && (text[n] < 123)))
+        if (isalpha(text[n]))
         {
             letters++;
         }
         
-        if (text[n] == ' ')
+        if (isspace(text[n]))
         {
             words++;
         }
