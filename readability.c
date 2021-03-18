@@ -20,11 +20,11 @@ int main(void)
         {
             letters++;
         }
-        if ((text[n] = ' '))
+        if (text[n] == ' ')
         {
             words++;
         }
-        if ( (text[n] = '.') || (text[n] = '!') || (text[n] = '?') )
+        if ( (text[n] == '.') || (text[n] == '!') || (text[n] == '?') )
         {
             sentences++;
         }
@@ -34,6 +34,7 @@ int main(void)
     float AveSentences = ((sentences * 100 ) / words);
     
     int grade = round ( 0.0588 * AveLetters - 0.296 * AveSentences - 15.8 );
+    
 //    print the grade level
     
     if (grade < 1) 
