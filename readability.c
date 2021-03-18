@@ -16,14 +16,15 @@ int main(void)
     
     for (int n = 0; n < strlen(text); n++)
     {
-        if (((text[n] > 64) && (text[n] < 91)) || ((text[n] > 96) && (text[n] < 123)))
+        if (isalpha(text[n]))
         {
             letters++;
         }
-        if (text[n] == ' ')
+        else if (isspace(text[n]))
         {
             words++;
         }
+
         if ( (text[n] == '.') || (text[n] == '!') || (text[n] == '?') )
         {
             sentences++;
