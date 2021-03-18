@@ -9,7 +9,7 @@
 int main(void)
 {
     string text = get_string("Text: ");
-    int letters = 0 ; int words = 1 ; int sentences = 0 ;
+    int letters = 0 ; int words = 1 ; int sentences = 1 ;
     
 //count letters, words, sentences
     
