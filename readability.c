@@ -16,11 +16,11 @@ int main(void)
     
     for (int n = 0; n < strlen(text); n++)
     {
-        if (isalpha(text[n]))
+        if (isalpha(text[n]) == true)
         {
             letters++;
         }
-        else if (isspace(text[n]))
+        else if (isspace(text[n]) == true)
         {
             words++;
         }
