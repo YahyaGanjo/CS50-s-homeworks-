@@ -5,7 +5,6 @@
 #include <cs50.h>
 #include <string.h>
 #include <math.h>
-#include<ctype.h>
 
 int main(void)
 {
