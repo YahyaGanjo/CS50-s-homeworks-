@@ -35,7 +35,7 @@ int main(void)
     float AveLetters = (( letters * 100 ) / words);
     float AveSentences = ((sentences * 100 ) / words);
     
-    int grade = round ( 0.0588 * AveLetters - 0.296 * AveSentences - 15.8 );
+    int grade = round (( 0.0588 * AveLetters - 0.296 * AveSentences - 15.8 ) -1);
     
 //    print the grade level
     
